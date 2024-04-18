@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
             role = 'Fresher';
         }
 
-        // Create a new row with table data (td) elements
         const newRow = document.createElement('tr');
         newRow.innerHTML = `
             <td>${name}</td>
@@ -34,14 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
             <td><button onclick="deleteRow(this)">Delete</button></td>
         `;
 
-        // Insert the new row at the top of the table (just after the header row)
         tableBody.insertBefore(newRow, tableBody.firstChild);
 
-        // Clear the form after submission
+    
         form.reset();
     });
 
-    // Function to delete a row when Delete button is clicked
     window.deleteRow = function(button) {
         const row = button.closest('tr');
         row.remove();
